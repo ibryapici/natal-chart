@@ -13,7 +13,7 @@ const NatalChart = ({horoscope}) => {
     height: height * .9,
   }
 
-  const radius = (chartDimensions.width / 2) - chartDimensions.width * .20
+  const radius = Math.min(chartDimensions.width, chartDimensions.height) / 2
 
   Array.from(Object.values(horoscope.astros)).map(astro => {
     astro.position.longitude -= horoscope.axes.asc.position.longitude
