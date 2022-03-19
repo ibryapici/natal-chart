@@ -7,7 +7,7 @@ class SortedAstros extends Component{
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.astros !== this.props.astros) {
-      this.setState({ astros: this.sortedAndSeparate(nextProps) })
+      this.setState({ astros: this.sortedAndSeparate(nextProps.astros) })
     }
   }
 
